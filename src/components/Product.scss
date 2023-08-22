@@ -1,0 +1,77 @@
+.Products {
+  box-shadow: 0px 16px 30px 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-left: -8px;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-radius: 20px;
+  margin-top: 8px;
+  border: 3px solid black;
+}
+.productGrid {
+  grid-gap: 20px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  button {
+    border: 2px solid black;
+    border-radius: 20px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  button:hover {
+    cursor: pointer;
+    background-color: pink;
+  }
+}
+.modal-content {
+  box-shadow: 0px 16px 30px 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-left: -8px;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-radius: 20px;
+  // margin-top: 8px;
+  border: 3px solid black;
+  height: 40%;
+  width: 60%;
+  position: fixed;
+  top: 30%;
+  left: 20%;
+
+  img {
+    max-height: 300px;
+    max-width: 300px;
+    // position: fixed;
+    // top: 40%;
+    // left: 20%;
+    // z-index: 3;/
+  }
+  .modal-content-inner {
+    margin-left: 20px;
+    .close {
+      display: flex;
+      justify-content: end;
+      height: 20px;
+      // background-
+      // color: red;
+    }
+    .close:hover {
+      cursor: pointer;
+    }
+
+    button {
+      border: 2px solid black;
+      border-radius: 20px;
+      height: 30px;
+      margin-right: 10px;
+      margin-left: 20px;
+    }
+    button:hover {
+      cursor: pointer;
+      background-color: pink;
+    }
+  }
+}
