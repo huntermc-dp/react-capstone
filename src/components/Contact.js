@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "../App.scss";
 import "./Styles/Contact.scss";
 import "./media/pink.jpeg";
 
@@ -27,27 +26,29 @@ class Contact extends Component {
           even though we say we will do so shortly!
         </h1>
         <br />
-        <label htmlFor="fname">
-          <h3>First Name:</h3>
-        </label>
-        <input type="text" id="fname" name="fname" />
-        <br />
-        <label htmlFor="lname">
-          <h3>Last Name:</h3>
-        </label>
-        <input type="text" id="lname" name="lname" />
-        <br />
-        <label htmlFor="email">
-          <h3>Email:</h3>
-        </label>
-        <input type="text" id="email" name="email" />
-        <br />
-        <label htmlFor="message">
-          <h3>Concerns/Message us:</h3>
-        </label>
-        <textarea name="Complaints" id="email" cols="30" rows="10"></textarea>
-        <br />
-        <button onClick={this.togglePopup}>Submit</button>
+        <div className="box">
+          <label htmlFor="fname">
+            <h3>First Name:</h3>
+          </label>
+          <input type="text" id="fname" name="fname" />
+          <br />
+          <label htmlFor="lname">
+            <h3>Last Name:</h3>
+          </label>
+          <input type="text" id="lname" name="lname" />
+          <br />
+          <label htmlFor="email">
+            <h3>Email:</h3>
+          </label>
+          <input type="text" id="email" name="email" />
+          <br />
+          <label htmlFor="message">
+            <h3>Concerns/Message us:</h3>
+          </label>
+          <textarea name="Complaints" id="email" cols="30" rows="10"></textarea>
+          <br />
+          <button onClick={this.togglePopup}>Submit</button>
+        </div>
 
         {this.state.showPopup && (
           <div className="popup">

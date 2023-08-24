@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { getProductData } from "./productData";
 import { removeProduct } from "./productData";
-import "../App.scss";
 import "./Styles/Product.scss";
 
 class Cart extends Component {
@@ -12,10 +11,11 @@ class Cart extends Component {
 
   render() {
     const cartItems = getProductData();
+    const itemCount = cartItems.length;
 
     return (
       <div className="mainWrapper4">
-        <h2>Cart Items</h2>
+        <h2>Cart Items {itemCount}</h2>
         <ul className="cartItems">
           {cartItems.map((product) => (
             <div key={product.id} className="deco">
