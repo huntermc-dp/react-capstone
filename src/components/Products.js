@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Product.scss";
+import "./Styles/Product.scss";
 import { addProduct } from "./productData";
 
 const Products = () => {

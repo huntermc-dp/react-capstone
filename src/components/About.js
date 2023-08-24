@@ -1,8 +1,8 @@
 import { Component } from "react";
 // import "../App.css";
-import Photo from "./Hunter.png";
-import "./About.scss";
-import "./pink.jpeg";
+import Photo from "./media/Hunter.png";
+import "./Styles/About.scss";
+import "./media/pink.jpeg";
 
 class About extends Component {
   render() {

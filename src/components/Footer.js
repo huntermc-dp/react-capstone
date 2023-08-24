@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
-import "./footer.scss";
-import "./pink.jpeg";
+import "./Styles/footer.scss";
+import "./media/pink.jpeg";
 
 export default function Footer() {
   return (

@@ -1,7 +1,7 @@
 import { Component } from "react";
 // import "../App.css";
-import "./pink.jpeg";
-import "./Home.scss";
+// import "./media/pink.jpeg";
+import "./Styles/Home.scss";
 // import "./shop.jpeg";
 
 class Home extends Component {

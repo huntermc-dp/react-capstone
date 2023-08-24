@@ -1,7 +1,7 @@
 .background {
   height: 740px;
   width: 102%;
-  background-image: url("pink.jpeg");
+  background-image: url("../media/pink.jpeg");
   // background: linear-gradient(
   //   90deg,
   //   hsla(39, 51%, 85%, 1) 0%,
@@ -14,7 +14,7 @@
     color: black;
   }
   .shop {
-    background-image: url("shop2.png");
+    background-image: url("../media/shop2.png");
     background-size: contain;
     position: absolute;
     margin: 2% 0 0 2%;
@@ -25,7 +25,7 @@
     border: 3px solid black;
   }
   .about {
-    background-image: url("shirt.png");
+    background-image: url("../media/shirt.png");
     background-color: white;
     background-repeat: no-repeat;
     background-size: 200px;
@@ -42,7 +42,7 @@
   }
   .help {
     background-color: white;
-    background-image: url("card.png");
+    background-image: url("../media/card.png");
     background-size: 200px;
     background-repeat: no-repeat;
     position: absolute;
@@ -57,7 +57,7 @@
     }
   }
   .random1 {
-    background-image: url("jewel.png");
+    background-image: url("../media/jewel.png");
     background-size: 200px;
     background-repeat: no-repeat;
     background-color: white;
@@ -74,7 +74,7 @@
     }
   }
   .random2 {
-    background-image: url("monitor.png");
+    background-image: url("../media/monitor.png");
     background-color: white;
     background-size: contain;
     background-repeat: no-repeat;
@@ -90,7 +90,7 @@
     }
   }
   .random3 {
-    background-image: url("mail.png");
+    background-image: url("../media/mail.png");
     background-size: 280px;
     background-repeat: no-repeat;
     background-color: white;
@@ -106,7 +106,7 @@
     }
   }
   .random4 {
-    background-image: url("cart.png");
+    background-image: url("../media/cart.png");
     background-size: 240px;
     background-repeat: no-repeat;
     background-color: white;
@@ -122,7 +122,7 @@
     }
   }
   .random5 {
-    background-image: url("me.png");
+    background-image: url("../media/me.png");
     background-size: 160px;
     background-repeat: no-repeat;
     background-color: white;
@@ -139,5 +139,5 @@
   }
 }
 .mainWrapper {
-  background-image: url("pink.jpeg");
+  background-image: url("../media/pink.jpeg");
 }

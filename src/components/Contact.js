@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../App.scss";
-import "./Contact.scss";
-import "./pink.jpeg";
+import "./Styles/Contact.scss";
+import "./media/pink.jpeg";
 
 class Contact extends Component {
   constructor(props) {

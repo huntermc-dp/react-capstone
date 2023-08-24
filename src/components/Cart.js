@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import { getProductData } from "./productData";
-import { removeProduct } from "./productData"; // Add the removeProduct function
+import { removeProduct } from "./productData";
 import "../App.scss";
-import "./Product.scss";
+import "./Styles/Product.scss";
 
 class Cart extends Component {
   removeFromCart = (productId) => {
-    removeProduct(productId); // Call the removeProduct function from productData.js
-    this.forceUpdate(); // Force a re-render to update the UI
+    removeProduct(productId);
+    this.forceUpdate();
   };
 
   render() {
