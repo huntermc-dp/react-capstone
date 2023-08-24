@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import React, { useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
@@ -9,6 +9,10 @@ import About from "./components/About.js";
 import Footer from "./components/Footer.js";
 import Contact from "./components/Contact.js";
 import Cart from "./components/Cart.js";
+import JProducts from "./components/JProducts.js";
+import MProducts from "./components/MProducts.js";
+import EProducts from "./components/EProducts.js";
+import WProducts from "./components/WProducts.js";
 
 const products = [{}];
 function App() {
@@ -23,6 +27,18 @@ function App() {
           <Route path="/Cart" exact component={Cart} />
           <Route path="/products" exact>
             <Products products={products} />
+          </Route>
+          <Route path="/jproducts" exact>
+            <JProducts products={products} />
+          </Route>
+          <Route path="/mproducts" exact>
+            <MProducts products={products} />
+          </Route>
+          <Route path="/eproducts" exact>
+            <EProducts products={products} />
+          </Route>
+          <Route path="/wproducts" exact>
+            <WProducts products={products} />
           </Route>
         </Switch>
         <Footer />

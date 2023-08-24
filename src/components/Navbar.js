@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import "./Navbar.css";
+import "./Navbar.scss";
 import Photo from "./fish.png";
 
 export default function Navbar() {

@@ -1,7 +1,7 @@
 import { Component } from "react";
 // import "../App.css";
 import "./pink.jpeg";
-import "./Home.css";
+import "./Home.scss";
 // import "./shop.jpeg";
 
 class Home extends Component {
@@ -17,22 +17,22 @@ class Home extends Component {
         </div>
         <div className="about">
           <h1>
-            <a href="http://localhost:3000/products"> Cloths</a>
+            <a href="http://localhost:3000/mproducts"> Mens</a>
           </h1>
         </div>
         <div className="help">
           <h1>
-            <a href="http://localhost:3000/products"> Storage</a>
+            <a href="http://localhost:3000/wproducts"> Womens</a>
           </h1>
         </div>
         <div className="random1">
           <h1>
-            <a href="http://localhost:3000/products"> Jewlery</a>
+            <a href="http://localhost:3000/jproducts"> Jewlery</a>
           </h1>
         </div>
         <div className="random2">
           <h1>
-            <a href="http://localhost:3000/products"> Monitors</a>
+            <a href="http://localhost:3000/eproducts"> Electronics</a>
           </h1>
         </div>
         <div className="random3">

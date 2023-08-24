@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./Product.scss";
-import { addProduct } from "./productData";
 
-const Products = () => {
+const WProducts = () => {
   const [products, setProducts] = useState([]);
   const [modalProduct, setModalProduct] = useState(null);
   const [sortOrder, setSortOrder] = useState("asc");
-  const [priceSortOrder, setPriceSortOrder] = useState("asc");
 
   const openModal = (product) => {
     setModalProduct(product);
@@ -16,33 +14,29 @@ const Products = () => {
     setModalProduct(null);
   };
 
-  const toggleTitleSortOrder = () => {
+  const toggleSortOrder = () => {
     setSortOrder(sortOrder === "asc" ? "desc" : "asc");
-  };
-
-  const togglePriceSortOrder = () => {
-    setPriceSortOrder(priceSortOrder === "asc" ? "desc" : "asc");
   };
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
-      .then((json) => setProducts(json))
+      .then((json) => {
+        const womensClothing = json.filter(
+          (product) => product.category === "women's clothing"
+        );
+        setProducts(womensClothing);
+      })
       .catch((error) => console.error("Error fetching products:", error));
   }, []);
 
   const sortedProducts = products.slice().sort((a, b) => {
-    const compareTitle = a.title.localeCompare(b.title);
-
-    if (compareTitle !== 0) {
-      return sortOrder === "asc" ? compareTitle : -compareTitle;
-    }
-    const priceComparison = parseFloat(a.price) - parseFloat(b.price);
-    return priceComparison * (priceSortOrder === "asc" ? 1 : -1);
+    const compareResult = a.title.localeCompare(b.title);
+    return sortOrder === "asc" ? compareResult : -compareResult;
   });
 
   return (
-    <div className="mainWrapper">
+    <div className="mainWrapper3">
       <div className="miniNav">
         <a href="http://localhost:3000/jproducts">Jewlery</a>
         <a href="http://localhost:3000/eproducts">Electronics</a>
@@ -50,11 +44,8 @@ const Products = () => {
         <a href="http://localhost:3000/wproducts">Womens Clothing</a>
         <a href="http://localhost:3000/products">All</a>
       </div>
-      <button className="sort" onClick={toggleTitleSortOrder}>
+      <button className="sort" onClick={toggleSortOrder}>
         Sort {sortOrder === "asc" ? "A-Z" : "Z-A"}
-      </button>
-      <button className="sort2" onClick={togglePriceSortOrder}>
-        $ {priceSortOrder === "asc" ? "Lowest" : "Highest"}
       </button>
 
       <div className="productGrid">
@@ -83,17 +74,12 @@ const Products = () => {
                       : product.description}
                   </p>
                 </div>
-                <button className="info" onClick={() => openModal(product)}>
-                  SEE MORE INFO
-                </button>
-                <button
-                  className="cart"
-                  onClick={() => {
-                    addProduct(product);
-                  }}
-                >
-                  ADD TO CART
-                </button>
+                <div className="add">
+                  <button className="info" onClick={() => openModal(product)}>
+                    SEE MORE INFO
+                  </button>
+                  <button className="cart">ADD TO CART</button>
+                </div>
               </div>
             </div>
           ))
@@ -102,8 +88,8 @@ const Products = () => {
       {modalProduct && (
         <div className="modal">
           <div className="modal-content">
-            <img src={modalProduct.image} alt="Product Image" />
             <div className="modal-content-inner">
+              <img src={modalProduct.image} alt="Product Image" />
               <span className="close" onClick={closeModal}>
                 &times;
               </span>
@@ -122,4 +108,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default WProducts;

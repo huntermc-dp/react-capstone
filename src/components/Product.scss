@@ -1,3 +1,25 @@
+.mainWrapper3 {
+  background-image: url("pink.jpeg");
+  height: 100vh;
+}
+.mainWrapper4 {
+  margin: -20px 0 0 -8px;
+  background-image: url("pink.jpeg");
+  height: 100vh;
+}
+.sort {
+  background-color: white;
+  border: 2px solid black;
+  margin-left: -8px;
+}
+.sort2 {
+  background-color: white;
+  border: 2px solid black;
+  // margin-left: -8px;
+}
+.sort:hover {
+  background-color: pink;
+}
 .Products {
   box-shadow: 0px 16px 30px 5px rgba(0, 0, 0, 0.2);
   padding: 20px;
@@ -8,6 +30,21 @@
   border-radius: 20px;
   margin-top: 8px;
   border: 3px solid black;
+}
+.miniNav {
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 3px solid black;
+  width: 100vw;
+  margin-left: -10px;
+  height: 30px;
+  a {
+    // border: 2px solid black;
+    color: black;
+    text-decoration: none;
+  }
 }
 .productGrid {
   grid-gap: 20px;
@@ -51,6 +88,7 @@
   }
   .modal-content-inner {
     margin-left: 20px;
+    // margin-top: 200px;
     .close {
       display: flex;
       justify-content: end;
@@ -72,6 +110,43 @@
     button:hover {
       cursor: pointer;
       background-color: pink;
+    }
+  }
+}
+.cartItems {
+  // background-color: white;
+  // width: 50%;
+  // height: 120px;
+
+  .deco {
+    grid-gap: 20px;
+    display: flex;
+    gap: 20px;
+    // flex-direction: column;
+    // grid-template-columns: repeat(4, 1fr);
+    border-radius: 40px;
+    border: 2px solid black;
+    width: 400px;
+    height: 200px;
+    background-color: white;
+    margin-bottom: 8px;
+    img {
+      max-height: 200px;
+      max-width: 200px;
+      margin-left: 4%;
+      margin-top: 7%;
+    }
+    .txt {
+      display: flex;
+      flex-direction: column;
+      button {
+        border-radius: 40px;
+        width: 80px;
+        border: 2px solid black;
+      }
+      button:hover {
+        background-color: pink;
+      }
     }
   }
 }

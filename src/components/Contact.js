@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import "../App.css";
-import "./Contact.css";
+import "../App.scss";
+import "./Contact.scss";
 import "./pink.jpeg";
 
 class Contact extends Component {

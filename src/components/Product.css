@@ -1,3 +1,29 @@
+.mainWrapper3 {
+  background-image: url("pink.jpeg");
+  height: 100vh;
+}
+
+.mainWrapper4 {
+  margin: -20px 0 0 -8px;
+  background-image: url("pink.jpeg");
+  height: 100vh;
+}
+
+.sort {
+  background-color: white;
+  border: 2px solid black;
+  margin-left: -8px;
+}
+
+.sort2 {
+  background-color: white;
+  border: 2px solid black;
+}
+
+.sort:hover {
+  background-color: pink;
+}
+
 .Products {
   box-shadow: 0px 16px 30px 5px rgba(0, 0, 0, 0.2);
   padding: 20px;
@@ -8,6 +34,21 @@
   border-radius: 20px;
   margin-top: 8px;
   border: 3px solid black;
+}
+
+.miniNav {
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 3px solid black;
+  width: 100vw;
+  margin-left: -10px;
+  height: 30px;
+}
+.miniNav a {
+  color: black;
+  text-decoration: none;
 }
 
 .productGrid {
@@ -66,5 +107,35 @@
 }
 .modal-content .modal-content-inner button:hover {
   cursor: pointer;
+  background-color: pink;
+}
+
+.cartItems .deco {
+  grid-gap: 20px;
+  display: flex;
+  gap: 20px;
+  border-radius: 40px;
+  border: 2px solid black;
+  width: 400px;
+  height: 200px;
+  background-color: white;
+  margin-bottom: 8px;
+}
+.cartItems .deco img {
+  max-height: 200px;
+  max-width: 200px;
+  margin-left: 4%;
+  margin-top: 7%;
+}
+.cartItems .deco .txt {
+  display: flex;
+  flex-direction: column;
+}
+.cartItems .deco .txt button {
+  border-radius: 40px;
+  width: 80px;
+  border: 2px solid black;
+}
+.cartItems .deco .txt button:hover {
   background-color: pink;
 }/*# sourceMappingURL=Product.css.map */
