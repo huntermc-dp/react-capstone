@@ -9,13 +9,22 @@ class Cart extends Component {
     this.forceUpdate();
   };
 
+  calculateTotal = () => {
+    const cartItems = getProductData();
+    return cartItems.reduce((total, product) => total + product.price, 0);
+  };
+
   render() {
     const cartItems = getProductData();
     const itemCount = cartItems.length;
+    const totalCost = this.calculateTotal();
 
     return (
       <div className="mainWrapper4">
-        <h2>Cart Items {itemCount}</h2>
+        <div className="totals">
+          <h2>Cart Items {itemCount}</h2>
+          <h2>Total: ${totalCost}</h2>
+        </div>
         <ul className="cartItems">
           {cartItems.map((product) => (
             <div key={product.id} className="deco">
@@ -23,7 +32,7 @@ class Cart extends Component {
                 height="150px"
                 width="100px"
                 src={product.image}
-                alt="Product Image"
+                alt="Product"
               />
               <div className="txt">
                 <h4>{product.title}</h4>
